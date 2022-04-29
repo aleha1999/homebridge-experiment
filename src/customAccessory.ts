@@ -28,6 +28,9 @@ export class TestAccessory implements AccessoryPlugin {
   }
 
   getServices(): Service[] {
-    throw new Error('Method not implemented.');
+    return [
+      this.movementService,
+      this.informationService,
+    ];
   }
 }
